@@ -18,7 +18,7 @@ namespace ServiceBusPeek
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            log.LogInformation("C#  trigger function processed a request.");
 
             string responseMessage = ServieBusQueue.PeekMessageAsync();
             return new OkObjectResult(responseMessage);
